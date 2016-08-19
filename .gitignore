@@ -1,1 +1,7 @@
 node_modules
+output
+.DS_Store
+attendance.tsv
+attendance2.tsv
+users.js
+.env

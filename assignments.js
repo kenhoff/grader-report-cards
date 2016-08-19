@@ -1,0 +1,22 @@
+module.exports = [
+	"Introduction, first HTML page",
+	"Command Line, Hosting your site on Firebase",
+	"HTML tags & attributes, the `style` attribute",
+	"CSS styles and selectors, external stylesheets",
+	"Portfolio Site",
+	"Client Project Kickoff: Working with Clients",
+	"Prebuilt & Customizable themes",
+	"Bootstrap & CSS frameworks",
+	"CSS layouts, the `display` style, flexbox & media queries",
+	"Client Project",
+	"Javascript 101: the `<script>` tag",
+	"Javascript 102: variables, loops, and functions",
+	"Javascript 103: objects and arrays",
+	"Javascript 104: working with the browser API",
+	"TSA Randomizer",
+	"jQuery 201: including jQuery on your site",
+	"jQuery 202: `$`, using jQuery selectors and methods",
+	"jQuery 203: HTTP requests with jQuery",
+	"Advanced Topics: Back End Web Development with Node.js",
+	"Random Quote App"
+];
