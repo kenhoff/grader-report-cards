@@ -81,7 +81,7 @@ request("https://slack.com/api/users.list?token=" + process.env.SLACK_API_TOKEN,
 				reportCard += slackUser.real_name + " received a score of **" + percentScore.toFixed(2) + "%** (" + completedPoints.toFixed(2) + "/" + totalPoints + " points total) across all assignments.\n\n"
 
 				for (var i = 0; i < assignments.length; i++) {
-					reportCard += "-	" + assignments[i] + " - **" + (grades[user].assignments[i] ? grades[user].assignments[i].score * 100 : 0).toFixed(2) + "%**\n"
+					reportCard += "-	" + assignments[i] + " - **" + (grades[user].assignments[i] ? grades[user].assignments[i].score * 100 : 0).toFixed(2) + "%**" + ((grades[user].assignments[i] && grades[user].assignments[i].url) ? " - " + grades[user].assignments[i].url : "") + "\n"
 				}
 
 				reportCard += "\n"
@@ -89,10 +89,13 @@ request("https://slack.com/api/users.list?token=" + process.env.SLACK_API_TOKEN,
 				reportCard += "### Portfolio\n\n"
 				reportCard += (grades[user].assignments[4] ? grades[user].assignments[4].url : "(unsubmitted)")
 				reportCard += "\n\n"
-				reportCard += "### TSA Randomizer\n\n"
-				reportCard += (grades[user].assignments[15] ? grades[user].assignments[14].url : "(unsubmitted)")
+				reportCard += "### Client Project\n\n"
+				reportCard += (grades[user].assignments[9] ? grades[user].assignments[9].url : "(unsubmitted)")
 				reportCard += "\n\n"
-				reportCard += "### Random Quote App\n\n"
+				reportCard += "### Coin Flipping App\n\n"
+				reportCard += (grades[user].assignments[14] ? grades[user].assignments[14].url : "(unsubmitted)")
+				reportCard += "\n\n"
+				reportCard += "### Social Network Front End\n\n"
 				reportCard += (grades[user].assignments[19] ? grades[user].assignments[19].url : "(unsubmitted)")
 				reportCard += "\n\n"
 
